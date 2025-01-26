@@ -36,12 +36,11 @@ const u = {
         ctx.beginPath();
         ctx.font = '25px Times New Roman';
 
-        // Create gradient
         const gradient = ctx.createLinearGradient(x - 100, y - 100, x + 100, y + 100);
-        gradient.addColorStop(0, "#00e1e1");  // Start color
-        gradient.addColorStop(1, "#ed62a7");  // End color
+        gradient.addColorStop(0, "#00e1e1");  
+        gradient.addColorStop(1, "#ed62a7"); 
 
-        ctx.fillStyle = gradient;  // Set gradient as fillStyle
+        ctx.fillStyle = gradient; 
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
         ctx.fillText(text, x, y);
@@ -95,7 +94,7 @@ class Rope {
                     mouse.x = null;
                     mouse.y = null;
                     this.si = Math.min(0.05 * this.ref.x, 0.05 * (W - this.ref.x), 0.05 * this.ref.y, 0.05 * (H - this.ref.y));
-                    ctx.fillStyle = "black"; // Фон чорного кольору
+                    ctx.fillStyle = "black"; 
                     ctx.fillRect(0, 0, W, H);
                 }
             } else {
@@ -177,7 +176,7 @@ const eventsListener = () => {
 };
 
 const animate = () => {
-    ctx.fillStyle = "rgba(0, 0, 0, 0.015)"; // Фон залишається чорним із прозорістю
+    ctx.fillStyle = "rgba(0, 0, 0, 0.015)";
     ctx.fillRect(0, 0, W, H);
     ropes.forEach((x, idx) => { x.update(idx); });
     if (stat) {
