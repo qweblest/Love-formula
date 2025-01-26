@@ -181,7 +181,7 @@ const animate = () => {
     if(stat){
     u.writeT("x=16*sin**3(t); y=13*cos(t)-",0.5*W,0.85*H);
 u.writeT("5*cos(2t)- 2*cos(3t) - cos(4t)",0.5*W,0.9*H);
-    u.writeT("proves that love is irrational",0.5*W,0.95*H);}
+    u.writeT("доказує, що кохання ірраціональне",0.5*W,0.95*H);}
     requestAnimationFrame(animate);
 };
 
